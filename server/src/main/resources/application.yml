@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone:
+        http://wyl2:456@${eureka.instance.hostname}:8762/eureka
+    registry-fetch-interval-seconds: 30
+  server:
+    enable-self-preservation: false
+spring:
+  security:
+    user:
+      name: wyl
+      password: 123
+  application:
+    name: SERVER1

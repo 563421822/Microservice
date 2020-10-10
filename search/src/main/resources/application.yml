@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: SEARCH
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wyl:123@localhost:8761/eureka,http://wyl2:456@localhost:8762/eureka
